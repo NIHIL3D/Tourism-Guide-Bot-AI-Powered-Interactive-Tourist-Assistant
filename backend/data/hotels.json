@@ -2,41 +2,36 @@
         "Hotel Sofitel Casablanca Tour Blanche": {
             "Stars": 5,
             "Spa": 5,
-            "Indoor Pool": 5,
+            "Outdoor Pool": 0,
             "Gourmet Dining": 5,
-            "Fitness Center": 4,
-            "Conference Facilities": 4
+            "Fitness Center": 4
         },
         "Hyatt Regency Casablanca": {
             "Stars": 4,
             "Spa": 4,
-            "Indoor Pool": 4,
+            "Outdoor Pool": 0,
             "Gourmet Dining": 4,
-            "Fitness Center": 5,
-            "Conference Facilities": 4
+            "Fitness Center": 5
         },
         "Le Casablanca Hotel": {
             "Stars": 5,
             "Spa": 4,
             "Outdoor Pool": 4,
-            "Restaurant": 4,
-            "Gym": 4,
-            "Business Center": 4
+            "Gourmet Dining": 4,
+            "Fitness Center": 4
         },
         "Le Royal Mansour Méridien": {
             "Stars": 5,
             "Spa": 5,
             "Outdoor Pool": 5,
-            "Fine Dining": 5,
-            "Fitness Center": 5,
-            "Business Facilities": 5
+            "Gourmet Dining": 5,
+            "Fitness Center": 5
         },
         "Ibis Casablanca City Center": {
             "Stars": 3,
             "Spa": 5,
             "Outdoor Pool": 5,
-            "Fine Dining": 5,
-            "Fitness Center": 5,
-            "Business Facilities": 5
+            "Gourmet Dining": 5,
+            "Fitness Center": 5
             }
 }

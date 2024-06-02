@@ -36,6 +36,7 @@ actions:
   - action_ask_city
   - action_ask_hotel
   - action_ask_restaurant
+  - action_find_places_near_me
 
 session_config:
   session_expiration_time: 60

@@ -11,6 +11,7 @@ intents:
   - ask_city
   - ask_hotel
   - ask_restaurant
+  - find_places_near_me
 
 responses:
   utter_greet:

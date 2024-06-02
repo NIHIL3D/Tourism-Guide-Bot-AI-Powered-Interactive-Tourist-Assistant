@@ -33,6 +33,44 @@ nlu:
     - I want to eat out and need a place to stay
     - Any good restaurants and hotels around here?
 
+- intent: ask_transportation
+  examples: |
+  - How can I get around Casablanca?
+  - What are the transportation options in Casablanca?
+  - How do I travel within Casablanca?
+  - Is there public transport in Casablanca?
+  - Can you tell me about transportation in Casablanca?
+
+- intent: ask_shopping
+  examples: |
+  - Where can I shop in Casablanca?
+  - Tell me about shopping places in Casablanca.
+  - Can you recommend some shopping centers in Casablanca?
+  - Where are the best places to shop in Casablanca?
+  - Are there any markets in Casablanca?
+
+- intent: ask_history
+  examples : |
+  - Can you tell me about the history of Casablanca?
+  - What's the historical background of Casablanca?
+  - Tell me about Casablanca's history.
+  - How old is Casablanca?
+  - Give me some historical facts about Casablanca.
+
+- intent: ask_emergency
+  examples : |
+  - What should I do in case of an emergency in Casablanca?
+  - Are there emergency services in Casablanca?
+  - Who do I contact in case of an emergency in Casablanca?
+  - Can you provide emergency numbers in Casablanca?
+  -What are the emergency contacts in Casablanca?
+
+- intent: ask_attraction_hours
+  examples: |
+    - What are the opening hours of Hassan II Mosque?
+    - What time does Royal Palace open?
+    - What are the hours for Old Medina?
+
 - intent: greet
   examples: |
     - hey

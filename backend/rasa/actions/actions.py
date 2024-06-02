@@ -138,4 +138,87 @@ class ActionAskRestaurants(Action):
 
         return []
 
+import json
+from urllib.request import urlopen
+from serpapi import GoogleSearch
+from rasa_sdk import Action, Tracker
+from rasa_sdk.executor import CollectingDispatcher
+
+class ActionFindRestaurants_nearme(Action):
+
+    def name(self) -> str:
+        return "action_find_restaurants_near_me"
+
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: dict) -> list:
+        
+
+        url = 'http://ipinfo.io/json'
+        response = urlopen(url)
+        data = json.load(response)
+
+        longitude = data['loc'].split(',')[0]
+        latitude = data['loc'].split(',')[1]
+
+
+        params = {
+            "engine": "google_maps",
+            "q": "restaurants",
+            "ll": f"@{longitude},{latitude},15.1z",
+            "type": "search",
+            "api_key": "YOUR_SERPAPI_KEY"
+        }
+
+        search = GoogleSearch(params)
+        results = search.get_dict()
+        local_results = results["local_results"]
+
+     
+        message = "Here are some local restaurants I found:\n"
+        for i, result in enumerate(local_results[:5]):
+            message += f"{i + 1}. {result['title']}\n"
+
+        dispatcher.utter_message(text=message)
+
+        return []
+
+class ActionFindHotels_nearme(Action):
+
+    def name(self) -> str:
+        return "action_find_hotels_near_me"
+
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: dict) -> list:
+
+        url = 'http://ipinfo.io/json'
+        response = urlopen(url)
+        data = json.load(response)
+
+        longitude = data['loc'].split(',')[0]
+        latitude = data['loc'].split(',')[1]
+
+
+        params = {
+            "engine": "google_maps",
+            "q": "hotels",
+            "ll": f"@{longitude},{latitude},15.1z",
+            "type": "search",
+            "api_key": "YOUR_SERPAPI_KEY"
+        }
+
+
+        search = GoogleSearch(params)
+        results = search.get_dict()
+        local_results = results["local_results"]
+
+        message = "Here are some local hotels I found:\n"
+        for i, result in enumerate(local_results[:5]):
+            message += f"{i + 1}. {result['title']}\n"
+
+        dispatcher.utter_message(text=message)
+
+        return []
+
 

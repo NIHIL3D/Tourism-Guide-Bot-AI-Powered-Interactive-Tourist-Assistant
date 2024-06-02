@@ -1,0 +1,62 @@
+{
+        "Hotel Sofitel Casablanca Tour Blanche": {
+            "Address": "Rue Sidi Belyout, Casablanca",
+            "Rating": 4.5,
+            "Stars": 5,
+            "View": "City view",
+            "Price Range": "$$$$",
+            "Spa": 5,
+            "Indoor Pool": 5,
+            "Gourmet Dining": 5,
+            "Fitness Center": 4,
+            "Conference Facilities": 4
+        },
+        "Hyatt Regency Casablanca": {
+            "Address": "Place des Nations Unies, Casablanca",
+            "Rating": 4.4,
+            "Stars": 4,
+            "View": "City view",
+            "Price Range": "$$$",
+            "Spa": 4,
+            "Indoor Pool": 4,
+            "Gourmet Dining": 4,
+            "Fitness Center": 5,
+            "Conference Facilities": 4
+        },
+        "Le Casablanca Hotel": {
+            "Address": "Boulevard de La Corniche, Casablanca",
+            "Rating": 4.6,
+            "Stars": 5,
+            "View": "City view",
+            "Price Range": "$$$$",
+            "Spa": 4,
+            "Outdoor Pool": 4,
+            "Restaurant": 4,
+            "Gym": 4,
+            "Business Center": 4
+        },
+        "Le Royal Mansour Méridien": {
+            "Address": "27 Avenue de l'Armée Royale, Casablanca",
+            "Rating": 4.8,
+            "Stars": 5,
+            "View": "Ocean view",
+            "Price Range": "$$$$",
+            "Spa": 5,
+            "Outdoor Pool": 5,
+            "Fine Dining": 5,
+            "Fitness Center": 5,
+            "Business Facilities": 5
+        },
+        "Ibis Casablanca City Center": {
+            "Address": "Angle Zaid Ou Hmad, Rue Sidi Belyout, Casablanca",
+            "Rating": 3.9,
+            "Stars": 3,
+            "View": "City view",
+            "Price Range": "$$",
+            "Spa": 5,
+            "Outdoor Pool": 5,
+            "Fine Dining": 5,
+            "Fitness Center": 5,
+            "Business Facilities": 5
+            }
+}

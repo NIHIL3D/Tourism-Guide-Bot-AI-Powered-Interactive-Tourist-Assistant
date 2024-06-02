@@ -165,7 +165,7 @@ class ActionFindPlacesNearMe(Action):
             "q": "restaurants",
             "ll": f"@{longitude},{latitude},15.1z",
             "type": "search",
-            "api_key": "YOUR_SERPAPI_KEY"
+            "api_key": "7782a6830a5c47611e75d659eb77b3454a19162b0b56523731d95fb89a8fac3a"
         }
 
         hotel_params = {
@@ -173,7 +173,7 @@ class ActionFindPlacesNearMe(Action):
             "q": "hotels",
             "ll": f"@{longitude},{latitude},15.1z",
             "type": "search",
-            "api_key": "YOUR_SERPAPI_KEY"
+            "api_key": "7782a6830a5c47611e75d659eb77b3454a19162b0b56523731d95fb89a8fac3a"
         }
 
  

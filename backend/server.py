@@ -1,9 +1,10 @@
 from flask import Flask, request, jsonify
 import json
+import requests
 from preferencesCalculation import best_answer, get_user_input, demande_user_input, update_user
 
 app = Flask(__name__)
-
+RASA_API_URL = "http://localhost:5005/webhooks/rest/webhook"
 firstAns = False
 missing_preferences = []
 
@@ -22,7 +23,7 @@ def check():
 
     if missing_preferences:
         return jsonify(demande_user_input(missing_preferences))
-    firstAns = True
+    # firstAns = True
     return jsonify("We are good to start how can I help you!")
 
 @app.route('/Search', methods=['POST'])
@@ -39,7 +40,13 @@ def Search():
     if firstAns:
         firstAns = False
         return jsonify("We are good to start how can I help you!")
-    return jsonify(message)
+    
+    # Use requests.post to send the message to RASA
+    rasa_response = requests.post(RASA_API_URL, json={'message': message})
+    rasa_response_json = rasa_response.json()
+    print("rasa response: ", rasa_response_json)
+    bot_response = rasa_response_json[0]['text'] if rasa_response_json else 'Sorry something went wrong goes wrong.'
+    return jsonify(bot_response)
 
 if __name__ == '__main__':
     app.run(debug=True)

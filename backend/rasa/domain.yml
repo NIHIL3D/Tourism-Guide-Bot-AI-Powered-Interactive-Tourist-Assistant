@@ -12,6 +12,11 @@ intents:
   - ask_hotel
   - ask_restaurant
   - find_places_near_me
+  - ask_transportation
+  - ask_shopping
+  - ask_history
+  - ask_emergency
+
 
 responses:
   utter_greet:
@@ -32,6 +37,30 @@ responses:
 
   utter_iamabot:
   - text: "I am a bot, powered by Rasa."
+
+  utter_ask_transportation:
+  - text: "Casablanca offers a variety of transportation options, including a modern tramway system, an extensive bus network operated by M’dina Bus, and a dedicated bus rapid transit (BRT) system known as the Busway. For taxis, petit taxis (small, red) are ideal for short city trips, while grand taxis (larger, white) handle longer distances and shared rides. Ride-hailing services like inDrive and Yango are available but may vary in availability. The city's major train stations, Casa-Voyageurs and Casa-Port, connect to other cities, including via high-speed trains. Car rentals are widely available, and cycling and electric scooters are gaining popularity. Pedestrian-friendly areas such as the Corniche and Old Medina are great for walking. For airport transfers, Mohammed V International Airport is accessible by train, bus, taxi, or private shuttles."
+
+  utter_ask_shopping:
+  - text: "Casablanca boasts a rich shopping landscape, blending contemporary malls with historic markets. The renowned Morocco Mall, among Africa's largest, showcases global brands alongside attractions like an expansive aquarium and an indoor amusement park. AnfaPlace Shopping Center offers a unique fusion of retail outlets, dining options, and scenic beachfront vistas. For those seeking a more traditional experience, the Old Medina entices with its bustling streets teeming with vendors peddling spices, textiles, and artisanal crafts. Meanwhile, the Derb Ghallef market is a hotspot for electronics and second-hand treasures. In contrast, Maarif emerges as a bustling retail hub renowned for its diverse array of fashion boutiques, artisanal stores, and practical supermarkets, making it a convenient shopping destination catering to all tastes and needs in the city."
+
+  utter_ask_history:
+  - text: "Casablanca's history spans centuries, from its origins as a Berber settlement to its strategic importance for various civilizations. Portuguese and Spanish influence shaped the city's early development, but it was under French control in the 20th century that Casablanca flourished as a major port and economic center. Since Morocco's independence in 1956, Casablanca has continued to grow, becoming a modern metropolis while retaining its cultural heritage. Today, it stands as Morocco's largest city and a symbol of resilience and progress."
+
+  utter_ask_emergency:
+  - text: "In case of an emergency in Casablanca, you should contact the appropriate emergency services:
+
+Police: Dial 19 for police assistance in case of criminal activities, accidents, or other emergencies requiring law enforcement intervention.
+
+Fire Department: Dial 15 to report fires or other emergencies requiring firefighting services.
+
+Medical Emergency: Dial 15 for medical emergencies, including accidents, injuries, or sudden illnesses, to request an ambulance.
+
+National Gendarmerie: Dial 177 to contact the National Gendarmerie for assistance in rural areas or for certain types of emergencies.
+
+Additionally, if you're in a hotel or other accommodation, the staff may be able to assist you in contacting the appropriate authorities. It's always a good idea to have these emergency numbers readily available, especially when traveling to a new location."
+
+
 
 actions:
   - action_ask_city

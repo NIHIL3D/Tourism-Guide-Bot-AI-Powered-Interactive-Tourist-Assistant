@@ -5,6 +5,26 @@ nlu:
 - intent: ask_city
   examples: |
     - what's the best place for me to visit in Morocco?
+    - Where should I go first in Morocco?
+    - Which location do you suggest I visit first in Morocco?
+    - What's the most popular destination to visit in Morocco?  
+    - What's the best place to check out during a trip to Morocco?  
+    - What's the most recommended destination to see in Morocco?
+    - Which locale offers the most captivating experience in Morocco?
+
+- intent: ask_hotel
+  examples: |
+    - Which hotel do you recommend in Casablanca?
+    - Where can I stay in Casablanca?
+    - Can you suggest a hotel in Casablanca?
+    - Can you recommend a nice hotel in Casablanca?
+
+- intent: ask_restaurant
+  examples: |
+    - Looking for a tasty spot to eat in Casablanca - any suggestions?
+    - Any must-try restaurants in Casablanca that you love?
+    - Where do locals go for a good meal in Casablanca?
+    - Where's the best place to grab a bite and chill in Casablanca?
 
 - intent: greet
   examples: |

@@ -9,6 +9,8 @@ intents:
   - mood_unhappy
   - bot_challenge
   - ask_city
+  - ask_hotel
+  - ask_restaurant
 
 responses:
   utter_greet:
@@ -32,6 +34,8 @@ responses:
 
 actions:
   - action_ask_city
+  - action_ask_hotel
+  - action_ask_restaurant
 
 session_config:
   session_expiration_time: 60

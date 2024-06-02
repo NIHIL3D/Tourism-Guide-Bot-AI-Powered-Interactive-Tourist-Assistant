@@ -33,8 +33,14 @@ stories:
   steps:
   - intent: ask_city
   - action: action_ask_city
+
+- story: ask hotel
+  steps:
   - intent: ask_hotel
   - action: action_ask_hotel
+
+- story: ask restaurant
+  steps:
   - intent: ask_restaurant
   - action: action_ask_restaurant
 

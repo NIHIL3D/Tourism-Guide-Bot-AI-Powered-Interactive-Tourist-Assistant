@@ -143,10 +143,10 @@ class ActionAskRestaurants(Action):
         return []
 
 
-class ActionFindRestaurants_nearme(Action):
+class ActionFindPlacesNearMe(Action):
 
     def name(self) -> str:
-        return "action_find_restaurants_near_me"
+        return "action_find_places_near_me"
 
     def run(self, dispatcher: CollectingDispatcher,
             tracker: Tracker,
@@ -160,8 +160,7 @@ class ActionFindRestaurants_nearme(Action):
         longitude = data['loc'].split(',')[0]
         latitude = data['loc'].split(',')[1]
 
-
-        params = {
+        restaurant_params = {
             "engine": "google_maps",
             "q": "restaurants",
             "ll": f"@{longitude},{latitude},15.1z",
@@ -169,37 +168,7 @@ class ActionFindRestaurants_nearme(Action):
             "api_key": "YOUR_SERPAPI_KEY"
         }
 
-        search = GoogleSearch(params)
-        results = search.get_dict()
-        local_results = results["local_results"]
-
-     
-        message = "Here are some local restaurants I found:\n"
-        for i, result in enumerate(local_results[:5]):
-            message += f"{i + 1}. {result['title']}\n"
-
-        dispatcher.utter_message(text=message)
-
-        return []
-
-class ActionFindHotels_nearme(Action):
-
-    def name(self) -> str:
-        return "action_find_hotels_near_me"
-
-    def run(self, dispatcher: CollectingDispatcher,
-            tracker: Tracker,
-            domain: dict) -> list:
-
-        url = 'http://ipinfo.io/json'
-        response = urlopen(url)
-        data = json.load(response)
-
-        longitude = data['loc'].split(',')[0]
-        latitude = data['loc'].split(',')[1]
-
-
-        params = {
+        hotel_params = {
             "engine": "google_maps",
             "q": "hotels",
             "ll": f"@{longitude},{latitude},15.1z",
@@ -207,15 +176,33 @@ class ActionFindHotels_nearme(Action):
             "api_key": "YOUR_SERPAPI_KEY"
         }
 
+ 
+        restaurant_search = GoogleSearch(restaurant_params)
+        restaurant_results = restaurant_search.get_dict()
+        local_restaurants = restaurant_results.get("local_results", [])
 
-        search = GoogleSearch(params)
-        results = search.get_dict()
-        local_results = results["local_results"]
 
-        message = "Here are some local hotels I found:\n"
-        for i, result in enumerate(local_results[:5]):
-            message += f"{i + 1}. {result['title']}\n"
+        hotel_search = GoogleSearch(hotel_params)
+        hotel_results = hotel_search.get_dict()
+        local_hotels = hotel_results.get("local_results", [])
 
+        message = "Here are some local restaurants and hotels I found:\n"
+
+        if local_restaurants:
+            message += "\nRestaurants:\n"
+            for i, result in enumerate(local_restaurants[:5]):
+                message += f"{i + 1}. {result['title']}\n"
+        else:
+            message += "\nSorry, I couldn't find any restaurants nearby.\n"
+
+        if local_hotels:
+            message += "\nHotels:\n"
+            for i, result in enumerate(local_hotels[:5]):
+                message += f"{i + 1}. {result['title']}\n"
+        else:
+            message += "\nSorry, I couldn't find any hotels nearby.\n"
+
+      
         dispatcher.utter_message(text=message)
 
         return []

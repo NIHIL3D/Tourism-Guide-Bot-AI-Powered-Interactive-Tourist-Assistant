@@ -8,6 +8,10 @@
 import json
 import numpy as np
 from sklearn.neighbors import NearestNeighbors
+from urllib.request import urlopen
+from serpapi import GoogleSearch
+from rasa_sdk import Action, Tracker
+from rasa_sdk.executor import CollectingDispatcher
 
 
 def find_best_ans(user_preferences, data):
@@ -138,11 +142,6 @@ class ActionAskRestaurants(Action):
 
         return []
 
-import json
-from urllib.request import urlopen
-from serpapi import GoogleSearch
-from rasa_sdk import Action, Tracker
-from rasa_sdk.executor import CollectingDispatcher
 
 class ActionFindRestaurants_nearme(Action):
 

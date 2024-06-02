@@ -1,0 +1,4 @@
+Flask
+rasa
+numpy
+scikit-learn

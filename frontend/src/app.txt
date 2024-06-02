@@ -1,0 +1,92 @@
+import React, { useState } from 'react';
+
+const App = () => {
+  const [searchType, setSearchType] = useState('prompt');
+  const [input, setInput] = useState('');
+  const [result, setResult] = useState('');
+  const [file, setFile] = useState(null);
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      let formData;
+      if (searchType === 'prompt') {
+        formData = new FormData();
+        formData.append('prompt', input);
+      } else if (searchType === 'image') {
+        if (input) {
+          formData = new FormData();
+          formData.append('imgURL', input);
+        } else if (fileInput) {
+          formData = new FormData();
+          formData.append('file', fileInput);
+        } else {
+          console.error('No image URL or file provided');
+          return;
+        }
+      }
+
+      const response = await fetch(searchType === 'prompt' ? '/Search' : '/SearchIMG', {
+        method: 'POST',
+        body: formData
+      });
+      const data = await response.json();
+      setResult(data);
+    } catch (error) {
+      console.error('Error fetching result:', error);
+    }
+  };
+  
+
+  return (
+    <div>
+      <h1>Moroccan Explorer</h1>
+      <input type="file" 
+      accept="image/*" 
+      value={file}
+      onChange={(e) => setFile(e.target.files[0])} />
+
+      {file && <img src={URL.createObjectURL(file)} alt="Preview" />}
+      <form onSubmit={handleSubmit}>
+        <div>
+          <input
+            type="radio"
+            id="prompt"
+            name="searchType"
+            value="prompt"
+            checked={searchType === 'prompt'}
+            onChange={() => setSearchType('prompt')}
+          />
+          <label htmlFor="prompt">Search by Prompt</label>
+        </div>
+        <div>
+          <input
+            type="radio"
+            id="image"
+            name="searchType"
+            value="image"
+            checked={searchType === 'image'}
+            onChange={() => setSearchType('image')}
+          />
+          <label htmlFor="image">Search by Image URL</label>
+        </div>
+        <label htmlFor="input">Enter {searchType === 'prompt' ? 'prompt' : 'image URL'}:</label>
+        <input
+          type="text"
+          id="input"
+          value={input}
+          onChange={(e) => setInput(e.target.value)}
+        />
+        <button type="submit">Search</button>
+      </form>
+      {result && (
+        <div>
+          <h2>Result:</h2>
+          <p>{result}</p>
+        </div>
+      )}
+    </div>
+  );
+};
+
+export default App;

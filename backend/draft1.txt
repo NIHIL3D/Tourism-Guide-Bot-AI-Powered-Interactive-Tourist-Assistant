@@ -1,0 +1,48 @@
+from flask import Flask, request, jsonify
+import json
+from preferencesCalculation import best_answer, get_user_input, demande_user_input, update_user
+
+app = Flask(__name__)
+
+firstAns = False
+missing_preferences = []
+
+with open('data/user.json', 'r') as user_file:
+    user_data = json.load(user_file)
+
+# Check if any preference is null
+missing_preferences = [pref for pref, value in user_data['preferences'].items() if value is None]
+
+@app.route('/P', methods=['GET', 'POST'])
+def check():
+    global missing_preferences, firstAns
+    print(missing_preferences.keys()[0])
+    if missing_preferences:
+        return jsonify(demande_user_input(missing_preferences))
+    firstAns = True
+    print("We are good to start how can I help you!")
+    return jsonify("We are good to start how can I help you!")
+
+@app.route('/Search', methods=['POST'])
+def Search():
+    global missing_preferences, firstAns, user_data
+    message = request.json["prompt"]
+    if missing_preferences:
+        user_input = get_user_input(message)
+        update_user(user_input)
+        # Reload the user data to update missing preferences
+        with open('data/user.json', 'r') as user_file:
+            user_data = json.load(user_file)
+        missing_preferences = [pref for pref, value in user_data['preferences'].items() if value is None]
+        if missing_preferences:
+            return jsonify(demande_user_input(missing_preferences))
+        else:
+            firstAns = True  # Ensure firstAns is set to True when all preferences are set
+            return jsonify("We are good to start how can I help you!")
+    if firstAns:
+        firstAns = False
+        return jsonify("We are good to start how can I help you!")
+    return jsonify(message)
+
+if __name__ == '__main__':
+    app.run(debug=True)

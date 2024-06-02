@@ -1,0 +1,122 @@
+{
+    "Marrakech": {
+        "Monuments": 5,
+        "Cultural Experiences": 5,
+        "Outdoor Activities": 3,
+        "Gastronomy & Restaurants": 5,
+        "Accommodation": 5,
+        "Surfing": 0,
+        "Warm Temperature": 5,
+        "City with Beautiful Natural Scenery": 3
+    },
+    "Casablanca": {
+        "Monuments": 3,
+        "Cultural Experiences": 4,
+        "Outdoor Activities": 3,
+        "Gastronomy & Restaurants": 4,
+        "Accommodation": 4,
+        "Surfing": 3,
+        "Warm Temperature": 4,
+        "City with Beautiful Natural Scenery": 2
+    },
+    "Rabat": {
+        "Monuments": 4,
+        "Cultural Experiences": 4,
+        "Outdoor Activities": 3,
+        "Gastronomy & Restaurants": 4,
+        "Accommodation": 4,
+        "Surfing": 2,
+        "Warm Temperature": 3,
+        "City with Beautiful Natural Scenery": 3
+    },
+    "Fes": {
+        "Monuments": 5,
+        "Cultural Experiences": 5,
+        "Outdoor Activities": 2,
+        "Gastronomy & Restaurants": 4,
+        "Accommodation": 4,
+        "Surfing": 0,
+        "Warm Temperature": 4,
+        "City with Beautiful Natural Scenery": 3
+    },
+    "Chefchaouen": {
+        "Monuments": 3,
+        "Cultural Experiences": 4,
+        "Outdoor Activities": 4,
+        "Gastronomy & Restaurants": 3,
+        "Accommodation": 3,
+        "Surfing": 0,
+        "Warm Temperature": 2,
+        "City with Beautiful Natural Scenery": 5
+    },
+    "Dakhla": {
+        "Monuments": 2,
+        "Cultural Experiences": 3,
+        "Outdoor Activities": 5,
+        "Gastronomy & Restaurants": 3,
+        "Accommodation": 3,
+        "Surfing": 5,
+        "Warm Temperature": 4,
+        "City with Beautiful Natural Scenery": 4
+    },
+    "Tangier": {
+        "Monuments": 3,
+        "Cultural Experiences": 4,
+        "Outdoor Activities": 4,
+        "Gastronomy & Restaurants": 4,
+        "Accommodation": 4,
+        "Surfing": 3,
+        "Warm Temperature": 3,
+        "City with Beautiful Natural Scenery": 4
+    },
+    "Agadir": {
+        "Monuments": 2,
+        "Cultural Experiences": 3,
+        "Outdoor Activities": 4,
+        "Gastronomy & Restaurants": 4,
+        "Accommodation": 4,
+        "Surfing": 5,
+        "Warm Temperature": 5,
+        "City with Beautiful Natural Scenery": 4
+    },
+    "Essaouira": {
+        "Monuments": 3,
+        "Cultural Experiences": 4,
+        "Outdoor Activities": 3,
+        "Gastronomy & Restaurants": 4,
+        "Accommodation": 3,
+        "Surfing": 5,
+        "Warm Temperature": 4,
+        "City with Beautiful Natural Scenery": 4
+    },
+    "Ouarzazate": {
+        "Monuments": 4,
+        "Cultural Experiences": 4,
+        "Outdoor Activities": 4,
+        "Gastronomy & Restaurants": 3,
+        "Accommodation": 3,
+        "Surfing": 0,
+        "Warm Temperature": 4,
+        "City with Beautiful Natural Scenery": 3
+    },
+    "Al Hoceima": {
+        "Monuments": 2,
+        "Cultural Experiences": 3,
+        "Outdoor Activities": 4,
+        "Gastronomy & Restaurants": 3,
+        "Accommodation": 3,
+        "Surfing": 2,
+        "Warm Temperature": 3,
+        "City with Beautiful Natural Scenery": 4
+    },
+    "Tetouan": {
+        "Monuments": 3,
+        "Cultural Experiences": 4,
+        "Outdoor Activities": 3,
+        "Gastronomy & Restaurants": 3,
+        "Accommodation": 3,
+        "Surfing": 2,
+        "Warm Temperature": 3,
+        "City with Beautiful Natural Scenery": 4
+    }
+}

@@ -26,7 +26,7 @@ nlu:
     - Where do locals go for a good meal in Casablanca?
     - Where's the best place to grab a bite and chill in Casablanca?
 
-- intent: find_places
+- intent: find_places_near_me
   examples: |
     - Find nearby restaurants and hotels
     - Show me local restaurants and hotels

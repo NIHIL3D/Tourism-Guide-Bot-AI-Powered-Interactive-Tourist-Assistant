@@ -5,7 +5,6 @@
 # https://rasa.com/docs/rasa/custom-actions
 
 
-# This is a simple example for a custom action which utters "Hello World!"
 import json
 import numpy as np
 from sklearn.neighbors import NearestNeighbors

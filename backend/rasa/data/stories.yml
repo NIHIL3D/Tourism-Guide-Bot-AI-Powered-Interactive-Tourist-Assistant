@@ -63,3 +63,8 @@ stories:
   steps:
   - intent: ask_emergency
   - action: utter_ask_emergency
+
+- story: casablanca_attractions
+  steps:
+  - intent: find_attractions
+  - action: utter_find_attractions

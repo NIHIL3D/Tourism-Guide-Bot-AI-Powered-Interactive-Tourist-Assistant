@@ -16,6 +16,7 @@ intents:
   - ask_shopping
   - ask_history
   - ask_emergency
+  - find_attractions
 
 
 responses:
@@ -37,6 +38,9 @@ responses:
 
   utter_iamabot:
   - text: "I am a bot, powered by Rasa."
+
+  utter_find_attractions:
+  - text: "Here are some top attractions in Casablanca: Hassan II Mosque, Old Medina, Ain Diab Beach, Morocco Mall, Royal Palace of Casablanca"
 
   utter_ask_transportation:
   - text: "Casablanca offers a variety of transportation options, including a modern tramway system, an extensive bus network operated by M’dina Bus, and a dedicated bus rapid transit (BRT) system known as the Busway. For taxis, petit taxis (small, red) are ideal for short city trips, while grand taxis (larger, white) handle longer distances and shared rides. Ride-hailing services like inDrive and Yango are available but may vary in availability. The city's major train stations, Casa-Voyageurs and Casa-Port, connect to other cities, including via high-speed trains. Car rentals are widely available, and cycling and electric scooters are gaining popularity. Pedestrian-friendly areas such as the Corniche and Old Medina are great for walking. For airport transfers, Mohammed V International Airport is accessible by train, bus, taxi, or private shuttles."

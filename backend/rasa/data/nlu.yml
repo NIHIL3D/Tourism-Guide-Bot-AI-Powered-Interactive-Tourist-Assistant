@@ -65,6 +65,13 @@ nlu:
   - Can you provide emergency numbers in Casablanca?
   -What are the emergency contacts in Casablanca?
 
+- intent: find_attractions
+  examples: |
+    - What are the top attractions in Casablanca?
+    - Are there any popular tourist spots in Casablanca?
+    - Could you list some must-see places in Casablanca?
+    - Tell me about some interesting places to visit in Casablanca.
+    - What are the best places to visit in Casablanca?
 
 - intent: greet
   examples: |

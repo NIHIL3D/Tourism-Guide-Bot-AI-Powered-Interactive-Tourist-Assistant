@@ -44,3 +44,22 @@ stories:
   - intent: ask_restaurant
   - action: action_ask_restaurant
 
+- story: casablanca_transportation
+  steps:
+  - intent: ask_transportation
+  - action: utter_ask_transportation
+
+- story: casablanca_shopping
+  steps:
+  - intent: ask_shopping
+  - action: utter_ask_shopping
+
+- story: casablanca_history
+  steps:
+  - intent: ask_history
+  - action: utter_ask_history
+
+- story: casablanca_emergency
+  steps:
+  - intent: ask_emergency
+  - action: utter_ask_emergency

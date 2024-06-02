@@ -7,6 +7,17 @@
         "Accommodation": 2,
         "Surfing": 1.0,
         "Warm Temperature": 2.0,
-        "City with Beautiful Natural Scenery": 4
+        "Beautiful Natural Scenery": 4,
+        "Stars": null,
+        "Spa": null,
+        "Outdoor Pool": null,
+        "Gourmet Dining": null,
+        "Fitness Center": null,
+        "Moroccan": null,
+        "International": null,
+        "Seafood": null,
+        "Asian": null,
+        "Italian": null,
+        "Cafe": null
     }
 }

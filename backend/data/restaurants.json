@@ -1,0 +1,62 @@
+{
+    "La Sqala": {
+        "Moroccan": 5,
+        "International": 2,
+        "Seafood": 2,
+        "Asian": 0,
+        "Italian": 0,
+        "Cafe": 1,
+        "Address": "Boulevard des Almohades, Casablanca",
+        "Rating": 4.5,
+        "View": "Garden and historic fortress",
+        "Price Range": "$$"
+    },
+    "Rick's Café": {
+        "Moroccan": 3,
+        "International": 5,
+        "Seafood": 4,
+        "Asian": 1,
+        "Italian": 2,
+        "Cafe": 2,
+        "Address": "248 Boulevard Sour Jdid, Casablanca",
+        "Rating": 4.3,
+        "View": "Ocean view",
+        "Price Range": "$$$"
+    },
+    "Le Cabestan": {
+        "Moroccan": 1,
+        "International": 4,
+        "Seafood": 5,
+        "Asian": 2,
+        "Italian": 2,
+        "Cafe": 1,
+        "Address": "90 Boulevard de la Corniche, Casablanca",
+        "Rating": 4.6,
+        "View": "Ocean view",
+        "Price Range": "$$$$"
+    },
+    "Le Basmane": {
+        "Moroccan": 5,
+        "International": 3,
+        "Seafood": 3,
+        "Asian": 1,
+        "Italian": 1,
+        "Cafe": 0,
+        "Address": "Boulevard de la Corniche, Ain Diab, Casablanca",
+        "Rating": 4.4,
+        "View": "Ocean view",
+        "Price Range": "$$$"
+    },
+    "Bondi Coffee Kitchen": {
+        "Moroccan": 1,
+        "International": 3,
+        "Seafood": 1,
+        "Asian": 2,
+        "Italian": 2,
+        "Cafe": 5,
+        "Address": "374 Boulevard Mohamed Zerktouni, Casablanca",
+        "Rating": 4.7,
+        "View": "Street view",
+        "Price Range": "$$"
+    }
+}

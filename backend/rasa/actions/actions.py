@@ -107,3 +107,36 @@ class ActionAskCity(Action):
         dispatcher.utter_message(text=ans)
 
         return []
+    
+class ActionAskHotels(Action):
+
+    def name(self) -> Text:
+        return "action_ask_hotels"
+
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+
+        ans = "You should visit "
+        ans += best_answer("../data/hotels.json")
+        dispatcher.utter_message(text=ans)
+
+        return []
+    
+
+class ActionAskRestaurants(Action):
+
+    def name(self) -> Text:
+        return "action_ask_restaurant"
+
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+
+        ans = "You should visit "
+        ans += best_answer("../data/restaurants.json")
+        dispatcher.utter_message(text=ans)
+
+        return []
+
+

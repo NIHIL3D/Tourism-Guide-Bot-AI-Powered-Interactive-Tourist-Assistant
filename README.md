@@ -1,4 +1,4 @@
-# Project Name: Adana Guide
+# Adana Guide
 
 ## Description
 Adana Guide is a chatbot application designed to assist tourists by providing information and answering queries. The system leverages Rasa for natural language understanding and generation, Flask for server-side logic, and a React frontend for user interaction.
